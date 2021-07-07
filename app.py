@@ -8,23 +8,17 @@ import pymongo
 from bson import json_util
 from bson.json_util import dumps
 # Access
-# import os
-from config import mongoPW
+import os
 
 # App
 app = Flask(__name__)
 CORS(app)
 app.config['DEBUG'] = True
-mongoURI = f'mongodb+srv://dbUser:{mongoPW}@cluster0.cscep.mongodb.net/test'
 
-# Connection to MongoDB Atlas -- Local App
-app.config['MONGO_URI'] = mongoURI
-connection = PyMongo(app)
-collection = connection.db['BookClub']
 # Connection to MongoDB Atlas -- Heroku App
-# app.config['MONGO_URI'] = os.environ['MONGO_URI']
-# client = pymongo.MongoClient(os.environ['MONGO_URI'])
-# connection = client['BookCLub']
+app.config['MONGO_URI'] = os.environ['MONGO_URI']
+client = pymongo.MongoClient(os.environ['MONGO_URI'])
+connection = client['BookCLub']
 
 # Routes
 # Home Route
