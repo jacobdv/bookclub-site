@@ -1,0 +1,42 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* NavCol */
+#navCol {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 15vw;
+    min-width: fit-content;
+    background-color: lightblue;
+    border-right: 1px solid black;
+    text-align: center;
+}
+#navHeader {
+    margin: 0;
+    padding: 30vh 0 8px 0;
+}
+#pageList {
+    list-style-type: none;
+    padding-left: none;
+    padding: 0;
+    margin: 0;
+}
+#pageList li {
+    padding: 8px 0px 8px 0px;
+}
+
+.pageLink {
+    text-decoration: none;
+    color: black;
+}
+.pageLink.active {
+    font-weight: bold;
+}
+.pageLink.inactive {
+    font-weight: normal;
+}

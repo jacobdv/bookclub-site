@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwaz | BookClub</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type='image/x-icon' href="/static/images/favicon.ico">
+</head>
+<body>
+    <div id='navCol'>       
+        <h1 id='navHeader'>Book Club</h1>
+        <ul id='pageList'>
+            <li><a class='pageLink active' href='/'>Home</a></li>
+            <li><button id='dropdownButton'></button>Members<i class="fa fa-caret-down"></i></li>
+            <div id='navDropdownDiv'>
+                <li><a class='pageLink inactive dropdown' href='/'>Test One</a></li>
+                <li><a class='pageLink inactive dropdown' href='/'>Test Two</a></li>
+                <li><a class='pageLink inactive dropdown' href='/'>Test Three</a></li>
+            </div>
+            <li><a class='pageLink inactive' href='/futureBooksList/'>Future Books List</a></li>
+        </ul>
+    </div>    
+    
+    <!-- D3 Scripts -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <!-- Javascript -->
+    <script type='text/javascript' src='/static/js/app.js'></script>
+</body>
+</html>
