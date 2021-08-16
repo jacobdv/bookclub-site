@@ -1,53 +1,48 @@
 html, body {
-    height: 100vh;
     margin: 0;
     padding: 0;
 }
-
-/* NavBar */
-#navCol {
-    background-color: lightblue;
+#nameHeader {
+    text-align: center;
     width: 100vw;
-    max-height: fit-content;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9em;
+}
+#mobileNavBar {
+    height: 40px;
+    width: 100vw;
+    background-color: mediumturquoise;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    border-top: 0.5px solid lightslategray;
+}
+#mobileNavIcon {
+    padding: 5px 0;
+}
+#mobileNavMenu {
+    position: fixed;
+    width: 100vw;
+    bottom: 40px;
+    background-color: turquoise;
+    font-size: 1em;
     text-align: center;
 }
-#navList {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    cursor: pointer;
-    width: fit-content;
-    margin-right: auto;
-    margin-left: auto;
+.navMenuItem {
+    padding: 0.5vh 0;
+    border-top: 0.5px solid lightslategray;
 }
-.navLI {
-    float: left;
+.navActive {
+    font-weight: bold;
 }
-.navLink {
-    display: inline-block;
-    padding: 14px 16px;
-    text-align: center;
-    text-decoration: none;
-}
-#dropdownButton {
-    display: inline-block;
-}
-#dropdownContent {
+.noDisplay {
     display: none;
-    position: absolute;
-    z-index: 1;
 }
-.dropdownLink {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    border-top: none;
-}
-#dropdownButton:hover #dropdownContent {
-    display: block;
-}
-#navList a:hover {
-    background-color: lawngreen;
+@media only screen and (min-width: 600px) {
+    .mobile {
+        display: none;
+    }
+    .web {
+        display: block;
+    }
 }
