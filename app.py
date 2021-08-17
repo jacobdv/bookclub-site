@@ -57,7 +57,10 @@ def futureBooks(goal, title, author):
     title = title.replace('%20',' ')
     author = author.replace('%20',' ')
     if goal == 'add':
-        futures.insert_one({'author': author, 'title': title})
+        query = list(futures.find({'author': author, 'title': title}))
+        print(query)
+        if not query:
+            futures.insert_one({'author': author, 'title': title})
     elif goal == 'remove':
         futures.delete_one({'author': author, 'title': title})
     futureslist = list(futures.find())

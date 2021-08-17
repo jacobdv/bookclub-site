@@ -11,7 +11,6 @@ addButton.on('click', function() {
     let title = d3.select('#titleInput')._groups[0][0].value;
     let author = d3.select('#authorInput')._groups[0][0].value;
     d3.json(`${linkFirstPart}/future/add/${title}/${author}/`).then(book => {
-        console.log(book);
         message = 'added';
         successReset(title, author, message);
     });
@@ -20,7 +19,6 @@ removeButton.on('click', function() {
     let title = d3.select('#titleInput')._groups[0][0].value;
     let author = d3.select('#authorInput')._groups[0][0].value;
     d3.json(`${linkFirstPart}/future/remove/${title}/${author}/`).then(book => {
-        console.log(book);
         message = 'removed';
         successReset(title, author, message);
     });
