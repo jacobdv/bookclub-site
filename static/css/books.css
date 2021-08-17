@@ -65,13 +65,7 @@
 .bookRow {
     width: 100%;
 }
-/* .bookTitles {
-    float: left;
-}
-.bookAuthors {
-    float: right;
-} */
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 425px) {
     #futureBooksList h1 {
         font-size: 1em;
     }
