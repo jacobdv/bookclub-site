@@ -1,0 +1,20 @@
+#bookSelection {
+    margin: 85px 0 80px 0;
+    text-align: center;
+}
+#bookSelection select {
+    padding: 8px;
+    border: 0.5px solid lightslategray;
+}
+#reviewSearchButton {
+    border: 0.5px solid lightslategray;
+    padding: 8px;
+    background-color: mediumturquoise;
+    width: fit-content;
+    box-shadow: 1px 1px;
+}
+#reviewSearchButton:active {
+    background-color: darkturquoise;
+    text-decoration: underline;
+    box-shadow: none;
+}

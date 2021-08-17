@@ -31,6 +31,22 @@
         <div class='row web' id='navBar'>
             
         </div>
+        <div class='row' id='bookSelection'>
+            <select name='book' id='bookTitleSelection'>
+                <option value='All'>All</option>
+            </select>
+            <select name='person' id='personSelection'>
+                <option value='All'>All</option>
+                <option value='Alysia'>Alysia</option>
+                <option value='Arianna'>Arianna</option>
+                <option value='Brendan'>Brendan</option>
+                <option value='Grace'>Grace</option>
+                <option value='Jacob'>Jacob</option>
+                <option value='Lyndan'>Lyndan</option>
+                <option value='Spencer'>Spencer</option>
+            </select>
+            <button id='reviewSearchButton' onclick='reviewSearch();'>Search</button>
+        </div>
     </div>
     
     <!-- D3 Scripts -->
@@ -38,5 +54,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <!-- Javascript -->
     <script type='text/javascript' src='/static/js/zwaz.js'></script>
+    <script type='text/javascript' src='/static/js/reviews.js'></script>
 </body>
 </html>

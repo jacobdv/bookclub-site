@@ -43,12 +43,13 @@ function retrieveData() {
         let futureBooksList = d3.select('#futureBooksList').html('');
         console.log(books)
         books.forEach(book => {
-            let titleCompressed = (book.title).replaceAll(' ','');
-            let authorCompressed = (book.author).replaceAll(' ','');
-            let bookDiv = futureBooksList.append('div').classed('bookRow', true).attr('id',`${titleCompressed}${authorCompressed}`);
+            let titleCompressed = ((book.title).replaceAll(' ','')).replaceAll(',','');
+            let authorCompressed = ((book.author).replaceAll(' ','')).replaceAll('.','');
+            console.log(authorCompressed)
+            let bookDiv = futureBooksList.append('div').classed('bookRow', true).attr('id',`${titleCompressed}${authorCompressed}`).attr('bookTitle',book.title).attr('bookAuthor',book.author);
             bookDiv = d3.select(`#${titleCompressed}${authorCompressed}`);
-            let title = bookDiv.append('h1').text(book.title).classed('bookTitles', true);
-            let author = bookDiv.append('h1').text(book.author).classed('bookAuthors', true);
+            let title = bookDiv.append('h1').text(`${book.title} - ${book.author}`).classed('bookTitles', true);
+            // let author = bookDiv.append('h1').text(book.author).classed('bookAuthors', true);
         });
     });
 }

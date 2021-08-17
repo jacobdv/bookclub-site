@@ -19,7 +19,7 @@ html, body {
     background-color: darkturquoise;
 }
 #mobileNavBar {
-    height: 40px;
+    height: 60px;
     width: 100vw;
     background-color: mediumturquoise;
     position: fixed;
@@ -28,12 +28,12 @@ html, body {
     border-top: 0.5px solid lightslategray;
 }
 #mobileNavIcon {
-    padding: 5px 0;
+    padding: 15px 0;
 }
 #mobileNavMenu {
     position: fixed;
     width: 100vw;
-    bottom: 40px;
+    bottom: 60px;
     font-size: 1.2em;
 }
 .navMenuItem {

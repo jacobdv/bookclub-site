@@ -1,5 +1,5 @@
 #addBooks, #booksMessage {
-    margin: 85px 0 10vh 0;
+    margin: 85px 0 80px 0;
     text-align: center;
 }
 #addBooks h1, #booksMessage h1 {
@@ -55,17 +55,22 @@
     background-color: mediumturquoise;
     border: 0.5px solid lightslategray;
     padding: 1vh 2vw;
+    text-align: center;
 }
 #futureBooksList h1 {
     font-size: 0.75em;
-    margin: 0;
+    font-weight: normal;
+    margin: 0 auto;
 }
-.bookTitles {
+.bookRow {
+    width: 100%;
+}
+/* .bookTitles {
     float: left;
 }
 .bookAuthors {
     float: right;
-}
+} */
 @media only screen and (min-width: 400px) {
     #futureBooksList h1 {
         font-size: 1em;

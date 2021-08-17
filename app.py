@@ -47,9 +47,21 @@ def data():
     bookslist = list(books.find())
     return json.dumps(bookslist, default=json_util.default)
 
-@app.route('/reviews/data/')
-def reviewsData():
-    reviewslist = list(bookReviews.find())
+@app.route('/reviews/<title>/<person>/')
+def reviewsData(title, person):
+    title = title.replace('%20',' ')
+    print(title, person)
+    if title != 'All':
+        if person != 'All':
+            query = {'title': title, 'name': person}
+        else:
+            query = {'title': title}
+    else:
+        if person != 'All':
+            query = {'name': person}
+        else:
+            query = {}
+    reviewslist = list(bookReviews.find(query))
     return json.dumps(reviewslist, default=json_util.default)
 
 @app.route('/future/<goal>/<title>/<author>/')
