@@ -1,8 +1,8 @@
-#addBooks {
-    margin: 85px 0 0 0;
+#addBooks, #booksMessage {
+    margin: 85px 0 10vh 0;
     text-align: center;
 }
-#addBooks h1 {
+#addBooks h1, #booksMessage h1 {
     font-size: 1.25em;
     margin: 1vh auto 0 auto;;
 }
@@ -10,6 +10,7 @@
     padding: 2px;
     margin: 0 auto 1vh auto;
     border: 0.5px solid lightslategray;
+    text-align: center;
 }
 .buttons {
     margin: 2vh 0 0 0;
@@ -28,11 +29,45 @@
 #removeButton {
     margin: 0 15vw 0 2.5vw;
 }
+#booksMessage {
+    display: none;
+}
 #anotherButton {
     width: 40vw;
-    margin: 0 30vw 0 30vw;
+    margin: 2vh 30vw 0 30vw;
 }
 #addButton:active, #removeButton:active, #anotherButton:active {
     background-color: darkturquoise;
     text-decoration: underline;
+}
+#futureBooksHeader {
+    text-align: center;
+}
+#futureBooksHeader h1 {
+    font-size: 1em;
+    margin: 5vh auto 1vh auto;
+}
+#futureBooksList {
+    margin: 0 5vw 50px 5vw;
+    width: 86vw;
+    min-height: 10vh;
+    overflow: scroll;
+    background-color: mediumturquoise;
+    border: 0.5px solid lightslategray;
+    padding: 1vh 2vw;
+}
+#futureBooksList h1 {
+    font-size: 0.75em;
+    margin: 0;
+}
+.bookTitles {
+    float: left;
+}
+.bookAuthors {
+    float: right;
+}
+@media only screen and (min-width: 400px) {
+    #futureBooksList h1 {
+        font-size: 1em;
+    }
 }
