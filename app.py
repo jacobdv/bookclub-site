@@ -15,12 +15,12 @@ CORS(app)
 app.config['DEBUG'] = True
 
 # Local
-# client = pymongo.MongoClient('mongodb+srv://dbUser:dbUserPassword@cluster0.cscep.mongodb.net/test')
-# app.config['MONGO_URI'] = 'mongodb+srv://dbUser:dbUserPassword@cluster0.cscep.mongodb.net/test'
+client = pymongo.MongoClient('mongodb+srv://dbUser:dbUserPassword@cluster0.cscep.mongodb.net/test')
+app.config['MONGO_URI'] = 'mongodb+srv://dbUser:dbUserPassword@cluster0.cscep.mongodb.net/test'
 # Heroku
-import os
-client = pymongo.MongoClient(os.environ['MONGO_URI'])
-app.config['MONGO_URI'] = os.environ['MONGO_URI']
+# import os
+# client = pymongo.MongoClient(os.environ['MONGO_URI'])
+# app.config['MONGO_URI'] = os.environ['MONGO_URI']
 
 # Connection to MongoDB Atlas -- Local App
 mongo = PyMongo(app)
