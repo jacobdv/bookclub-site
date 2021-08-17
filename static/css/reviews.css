@@ -26,6 +26,7 @@
     border: 0.5px solid lightslategray;
     padding: 1vh 4vw 2vh;
     margin: 1vh 0;
+    background-color: mediumturquoise;
 }
 .reviewHeader {
     font-size: 1.2em;
