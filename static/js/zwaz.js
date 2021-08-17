@@ -1,4 +1,5 @@
-const linkFirstPart = 'http://127.0.0.1:5000'
+// const linkFirstPart = 'http://127.0.0.1:5000'
+const linkFirstPart = 'https://zbookclub.herokuapp.com'
 // Toggle Mobile Nav Menu
 let mobileNav = d3.select('#mobileNavBar');
 let navMenu = d3.select('#mobileNavMenu');
