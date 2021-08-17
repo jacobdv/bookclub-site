@@ -7,7 +7,7 @@ import pymongo
 # Endpoints
 import json
 from bson import json_util
-from bson.json_util import dumps
+from bson.json_util import default, dumps
 
 # App
 app = Flask(__name__)
@@ -24,8 +24,10 @@ app.config['MONGO_URI'] = 'mongodb+srv://dbUser:dbUserPassword@cluster0.cscep.mo
 
 # Connection to MongoDB Atlas -- Local App
 mongo = PyMongo(app)
-db = mongo.db['BookClub']
+db = client['BookClub']
 books = db['books']
+bookReviews = db['reviews']
+futures = db['futureList']
 
 # Routes
 # Home Route
@@ -33,14 +35,34 @@ books = db['books']
 def index():
     return render_template('home.html')
 @app.route('/books/')
-def futureBooks():
+def booksList():
     return render_template('books.html')
+@app.route('/reviews/')
+def reviews():
+    return render_template('reviews.html')
 
 # Data Routes
 @app.route('/books/data/')
 def data():
     bookslist = list(books.find())
-    return json.dumps(books, default=json_util.default)
+    return json.dumps(bookslist, default=json_util.default)
+
+@app.route('/reviews/data/')
+def reviewsData():
+    reviewslist = list(bookReviews.find())
+    return json.dumps(reviewslist, default=json_util.default)
+
+@app.route('/future/<goal>/<title>/<author>/')
+def futureBooks(goal, title, author):
+    title = title.replace('%20',' ')
+    author = author.replace('%20',' ')
+    if goal == 'add':
+        futures.insert_one({'author': author, 'title': title})
+    elif goal == 'remove':
+        futures.delete_one({'author': author, 'title': title})
+    futureslist = list(futures.find())
+    return json.dumps(futureslist, default=json_util.default)
+
 # Debug
 if __name__ == '__main__':
     app.run(debug=True)

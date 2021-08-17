@@ -1,12 +1,22 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: powderblue;
 }
 #nameHeader {
     text-align: center;
     width: 100vw;
     font-family: 'Quicksand', sans-serif;
     font-size: 0.9em;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background-color: mediumturquoise;
+    border-bottom: 0.5px solid lightslategray;
+}
+#nameHeader:active, #mobileNavBar:active, .navMenuItem:active {
+    text-decoration: underline;
+    background-color: darkturquoise;
 }
 #mobileNavBar {
     height: 40px;
@@ -24,13 +34,15 @@ html, body {
     position: fixed;
     width: 100vw;
     bottom: 40px;
-    background-color: turquoise;
-    font-size: 1em;
-    text-align: center;
+    font-size: 1.2em;
 }
 .navMenuItem {
-    padding: 0.5vh 0;
-    border-top: 0.5px solid lightslategray;
+    margin: 0 auto 1vh auto;
+    padding: 12px;
+    background-color: mediumturquoise;
+    border: 1px solid lightslategray;
+    border-radius: 100%;
+    width: fit-content;
 }
 .navActive {
     font-weight: bold;

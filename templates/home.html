@@ -7,6 +7,7 @@
     <title>Zwaz | BookClub</title>
     <!-- My CSS -->
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
     <!-- Favicon -->
     <link rel="icon" type='image/x-icon' href="/static/images/favicon.ico">
     <!-- Fonts -->
@@ -22,21 +23,23 @@
         <div class='row mobile noDisplay' id='mobileNavMenu'>
             <div class='navMenuItem navActive' value='home'>Home</div>
             <div class='navMenuItem' value='reviews'>Reviews</div>
-            <div class='navMenuItem' value='bookList'>Book List</div>
+            <div class='navMenuItem' value='books'>Book List</div>
         </div>
         <div class='row mobile' id='mobileNavBar'>
             <img id='mobileNavIcon' src="https://img.icons8.com/material-outlined/30/000000/menu--v1.png"/>
         </div>
-
         <div class='row web' id='navBar'>
             
         </div>
-    </div>'
+        <div class='row' id='booklist'>
+        </div>
+    </div>
     
     <!-- D3 Scripts -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <!-- Javascript -->
     <script type='text/javascript' src='/static/js/zwaz.js'></script>
+    <script type='text/javascript' src='/static/js/home.js'></script>
 </body>
 </html>
