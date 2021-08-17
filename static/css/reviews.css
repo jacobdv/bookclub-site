@@ -1,5 +1,5 @@
 #bookSelection {
-    margin: 85px 0 80px 0;
+    margin: 85px auto 5px;
     text-align: center;
 }
 #bookSelection select {
@@ -17,4 +17,21 @@
     background-color: darkturquoise;
     text-decoration: underline;
     box-shadow: none;
+}
+#reviewDisplay {
+    width: 90vw;
+    margin: 2vh 5vw 80px 5vw;
+}
+.bookReview {
+    border: 0.5px solid lightslategray;
+    padding: 1vh 4vw 2vh;
+    margin: 1vh 0;
+}
+.reviewHeader {
+    font-size: 1.2em;
+    margin: 0 0 1vh 0;
+    text-align: center;
+}
+.reviewContent {
+    margin: 0;
 }
