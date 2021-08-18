@@ -32,6 +32,7 @@
             
         </div>
         <div class='row' id='bookSelection'>
+            <button id='addReview' onclick='addReview();'>Add</button>
             <select name='book' id='bookTitleSelection'>
                 <option value='All'>All</option>
             </select>
@@ -49,6 +50,17 @@
         </div>
         <div class='row' id='reviewDisplay'>
             
+        </div>
+        <div class='row' id='reviewAddition'>
+            <h1 id='newReviewName'>Name</h1>
+            <input type='text' id='nameInput' class='inputs'>
+            <h1 id='newReviewTitle'>Title</h1>
+            <input type='text' id='titleInput' class='inputs'>
+            <h1 id='newReviewContent'>Review</h1>
+            <input type='text' id='contentInput' class='inputs'>
+            <h1 id='newReviewRating'>Rating</h1>
+            <input type='text' id='ratingInput' class='inputs'>
+            <button class='newReviewButton' id='reviewButton' onclick='submitReview();'>Submit Review</button>
         </div>
     </div>
     

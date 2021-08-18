@@ -6,14 +6,14 @@
     padding: 8px;
     border: 0.5px solid lightslategray;
 }
-#reviewSearchButton {
+#reviewSearchButton, #addReview, #reviewButton {
     border: 0.5px solid lightslategray;
     padding: 8px;
     background-color: mediumturquoise;
     width: fit-content;
     box-shadow: 1px 1px;
 }
-#reviewSearchButton:active {
+#reviewSearchButton:active, #addReview:active, #reviewButton:active {
     background-color: darkturquoise;
     text-decoration: underline;
     box-shadow: none;
@@ -35,4 +35,24 @@
 }
 .reviewContent {
     margin: 0;
+}
+#reviewAddition {
+    display: none;
+    text-align: center;
+    width: 80vw;
+    margin: 5vh 10vw 0 10vw;
+}
+#reviewAddition h1 {
+    font-size: 1em;
+    margin: 3vh 0 0 0;
+}
+.inputs {
+    border: 0.5px solid lightslategray;
+    width: 100%;
+    height: 3vh;
+    margin: 1vh 0 1vh 0;
+    font-size: 0.8em;
+}
+#reviewButton {
+    margin: 3vh 0 0 0;
 }

@@ -15,12 +15,12 @@ CORS(app)
 app.config['DEBUG'] = True
 
 # Local
-# client = pymongo.MongoClient('mongodb+srv://dbUser:dbUserPassword@cluster0.cscep.mongodb.net/test')
-# app.config['MONGO_URI'] = 'mongodb+srv://dbUser:dbUserPassword@cluster0.cscep.mongodb.net/test'
+client = pymongo.MongoClient('mongodb+srv://dbUser:dbUserPassword@cluster0.cscep.mongodb.net/test')
+app.config['MONGO_URI'] = 'mongodb+srv://dbUser:dbUserPassword@cluster0.cscep.mongodb.net/test'
 # Heroku
 import os
-client = pymongo.MongoClient(os.environ['MONGO_URI'])
-app.config['MONGO_URI'] = os.environ['MONGO_URI']
+# client = pymongo.MongoClient(os.environ['MONGO_URI'])
+# app.config['MONGO_URI'] = os.environ['MONGO_URI']
 
 # Connection to MongoDB Atlas -- Local App
 mongo = PyMongo(app)
@@ -63,6 +63,14 @@ def reviewsData(title, person):
             query = {}
     reviewslist = list(bookReviews.find(query))
     return json.dumps(reviewslist, default=json_util.default)
+
+@app.route('/reviews/<name>/<title>/<review>/<rating>/')
+def addReview(name, title, review, rating):
+    title = title.replace('%20',' ')
+    name = name.replace('%20',' ')
+    review = review.replace('%20',' ')
+    bookReviews.insert_one({'name':name, 'title':title, 'content':review, 'rating':rating})
+    return 'Success'
 
 @app.route('/future/<goal>/<title>/<author>/')
 def futureBooks(goal, title, author):

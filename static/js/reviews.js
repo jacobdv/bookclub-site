@@ -6,7 +6,9 @@ d3.json(`${linkFirstPart}/future/get/title/author/`).then(books => {
 });
 
 function reviewSearch() {
-    let titleSearch = d3.select('#bookSelection')._groups[0][0].children[0].value;
+    let reviewDisplay = d3.select('#reviewDisplay').attr('style','display:block;');
+    let reviewAddition = d3.select('#reviewAddition').attr('style','display:none;');
+    let titleSearch = d3.select('#bookTitleSelection')._groups[0][0].value;
     let personSearch = d3.select('#personSelection')._groups[0][0].value;
     console.log(titleSearch)
     console.log(personSearch)
@@ -22,3 +24,21 @@ function reviewSearch() {
         });
     });
 };
+
+function addReview() {
+    let reviewDisplay = d3.select('#reviewDisplay').attr('style','display:none;');
+    let reviewAddition = d3.select('#reviewAddition').attr('style','display:block;');
+}
+
+function submitReview() {
+    let name = d3.select('#nameInput')._groups[0][0].value;
+    let title = d3.select('#titleInput')._groups[0][0].value;
+    let review = d3.select('#contentInput')._groups[0][0].value;
+    let rating = d3.select('#ratingInput')._groups[0][0].value;
+    //  Add functionality to pass info to python from user input.
+    d3.json(`${linkFirstPart}/reviews/${name}/${title}/${review}/${rating}/`).then(data => {
+        console.log(response)
+    })
+    let reviewDisplay = d3.select('#reviewDisplay').attr('style','display:block;');
+    let reviewAddition = d3.select('#reviewAddition').attr('style','display:none;');
+}
