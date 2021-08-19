@@ -22,9 +22,10 @@
     background-color: mediumturquoise;
     width: 30vw;
     min-width: fit-content;
+    box-shadow: 1px 1px;
 }
 #addButton {
-    margin: 0 2.5vw 0 15vw;
+    margin: 0 2.5vw 0 17vw;
 }
 #removeButton {
     margin: 0 15vw 0 2.5vw;
@@ -39,6 +40,7 @@
 #addButton:active, #removeButton:active, #anotherButton:active {
     background-color: darkturquoise;
     text-decoration: underline;
+    box-shadow: none;
 }
 #futureBooksHeader {
     text-align: center;
@@ -51,7 +53,7 @@
     margin: 0 5vw 50px 5vw;
     width: 86vw;
     min-height: 10vh;
-    overflow: scroll;
+    overflow-y: scroll;
     background-color: mediumturquoise;
     border: 0.5px solid lightslategray;
     padding: 1vh 2vw;
@@ -64,6 +66,9 @@
 }
 .bookRow {
     width: 100%;
+}
+::-webkit-scrollbar {
+    background: transparent;
 }
 @media only screen and (min-width: 425px) {
     #futureBooksList h1 {

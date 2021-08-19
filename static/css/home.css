@@ -6,13 +6,35 @@
     width: 100%;
     margin: 2vh 0;
 }
-.book img {
-    max-width: 100%;
+.bookImg {
     height: auto;
+    width: 85vw;
 }
 .bookText {
     text-align: center;
     font-size: 1em;
     font-weight: normal;
     margin: 0.5vh 0 0 0;
+}
+@media only screen and (min-width: 600px) {
+    .book {
+        width: 48%;
+        margin: 0 1%;
+        float: left;
+        text-align: center;
+    }
+    .bookImg {
+        height: 40vh;
+        width: auto;
+    }
+}
+@media only screen and (min-width: 750px) {
+    .bookImg {
+        height: 50vh;
+    }
+}
+@media only screen and (min-width: 1150px) {
+    .book {
+        width: 31%;
+    }
 }

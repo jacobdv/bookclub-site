@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class='container'>
-        <div class='row mobile' id='nameHeader'>
+        <div class='row' id='nameHeader'>
             <h1 id='headerText'>(Mr.) Darcy's Book Club</h1>
         </div>
         <div class='row mobile noDisplay' id='mobileNavMenu'>
@@ -29,10 +29,11 @@
             <img id='mobileNavIcon' src="https://img.icons8.com/material-outlined/30/000000/menu--v1.png"/>
         </div>
         <div class='row web' id='navBar'>
-            
+            <div class='navItem navActive' value='home'><p>Home</p></div>
+            <div class='navItem' value='reviews'><p>Reviews</p></div>
+            <div class='navItem' value='books'><p>Book List</p></div>
         </div>
-        <div class='row' id='booklist'>
-        </div>
+        <div class='row' id='booklist'></div>
     </div>
     
     <!-- D3 Scripts -->

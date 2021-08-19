@@ -1,5 +1,5 @@
-const linkFirstPart = 'http://127.0.0.1:5000'
-// const linkFirstPart = 'https://zbookclub.herokuapp.com'
+// const linkFirstPart = 'http://127.0.0.1:5000'
+const linkFirstPart = 'https://zbookclub.herokuapp.com'
 // Toggle Mobile Nav Menu
 let mobileNav = d3.select('#mobileNavBar');
 let navMenu = d3.select('#mobileNavMenu');
@@ -28,3 +28,15 @@ let titleLink = d3.select('#nameHeader');
 titleLink.on('click', function() {
     location = '/';
 });
+
+// Web Menu Navigation
+let navBar = d3.selectAll('.navItem');
+navBar.on('click', function() {
+    let page = d3.select(this)._groups[0][0].attributes[1].value;
+    console.log(page)
+    if (page !== 'home') {
+        location = `/${page}/`;
+    } else {
+        location = '/';
+    }
+})

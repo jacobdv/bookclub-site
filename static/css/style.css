@@ -47,8 +47,42 @@ html, body {
 .navActive {
     font-weight: bold;
 }
+.mobile {
+    display: block;
+}
+.web {
+    display: none;
+}
 .noDisplay {
     display: none;
+}
+#navBar {
+    width: 100vw;
+    height: 2vh;
+    margin: 75px 0 -40px 0;
+    min-height: fit-content;
+}
+.navItem {
+    margin: 0;
+    float: left;
+    text-align: center;
+    width: 33.3333%;
+    font-size: 1.2em;
+    background-color: mediumturquoise;
+    border-bottom: 0.5px solid lightslategray;
+    box-shadow: 0 1px;
+    cursor: pointer;
+}
+.navItem p {
+    margin: 1vh auto 1vh auto;
+    width: fit-content;
+}
+.navItem:active {
+    text-decoration: underline;
+    box-shadow: none;
+    margin-right: -3px;
+    border-right: 0.5px solid lightslategray;
+    border-left: 0.5px solid lightslategray;
 }
 @media only screen and (min-width: 600px) {
     .mobile {

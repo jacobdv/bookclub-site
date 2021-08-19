@@ -4,6 +4,7 @@ d3.json(`${linkFirstPart}/future/get/title/author/`).then(books => {
         bookSelection.append('option').attr('value',book.title).text(book.title);
     });
 });
+reviewSearch();
 
 function reviewSearch() {
     let reviewDisplay = d3.select('#reviewDisplay').attr('style','display:block;');
@@ -41,4 +42,5 @@ function submitReview() {
     })
     let reviewDisplay = d3.select('#reviewDisplay').attr('style','display:block;');
     let reviewAddition = d3.select('#reviewAddition').attr('style','display:none;');
+    reviewSearch();
 }
