@@ -47,8 +47,8 @@
     margin: 5vh auto 1vh auto;
 }
 #futureBooksList {
-    margin: 0 5vw 50px 5vw;
-    width: 86vw;
+    margin: 0 15vw 50px 15vw;
+    width: 66vw;
     min-height: 10vh;
     overflow-y: scroll;
     background-color: mediumturquoise;
@@ -71,6 +71,8 @@
     #futureBooksList h1 {
         font-size: 1em;
     }
+}
+@media only screen and (min-width: 800px) {
     #addButton {
         margin: 0 2.5vw 0 17vw;
     }
