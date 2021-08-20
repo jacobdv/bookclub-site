@@ -1,6 +1,7 @@
 #bookSelection {
-    margin: 85px auto 5px;
+    margin: 85px 5vw 5px 5vw;
     text-align: center;
+    width: 90vw;
 }
 #bookSelection select {
     padding: 8px;
@@ -60,7 +61,7 @@
 }
 #contentInput {
     line-height: 20px;
-    min-height: 80px;
+    min-height: 60px;
     font-weight: bold;
     color: black;
     width: 40vw;
@@ -73,4 +74,16 @@
 }
 #reviewButton {
     margin: 3vh 0 0 0;
+}
+
+@media only screen and (min-width: 500px) {
+    #contentInput {
+        min-height: 80px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    #addReview {}
+    #bookTitleSelection {}
+    #personSelection {}
+    #reviewSearchButton {}
 }
