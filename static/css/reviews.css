@@ -41,7 +41,7 @@
     display: none;
     text-align: center;
     width: 80vw;
-    margin: 5vh 10vw 0 10vw;
+    margin: 5vh 10vw 65px 10vw;
 }
 #reviewAddition h1 {
     font-size: 1em;
@@ -81,15 +81,18 @@
         min-height: 80px;
     }
 }
+@media only screen and (min-width: 500px) {
+    #reviewAddition {
+        margin: 5vh 10vw 0 10vw;
+    }
+}
 @media only screen and (max-width: 480px) {
     #addReview, #reviewSearchButton {
-        width: 18vw;
+        width: 13vw;
         margin: 1vh 1vw;
     }
     #bookTitleSelection, #personSelection {
-        width: 78vw;
+        width: 73vw;
         margin: 1vh 1vw;
     }
-    #personSelection {}
-    #reviewSearchButton {}
 }
