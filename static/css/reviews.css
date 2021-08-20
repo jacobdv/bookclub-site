@@ -62,6 +62,8 @@
     width: 40vw;
     margin: 1vh 20vw 1vh 20vw;
     text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9em;
 }
 #reviewButton {
     margin: 3vh 0 0 0;
