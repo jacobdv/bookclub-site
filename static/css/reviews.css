@@ -59,9 +59,10 @@
     margin: 1vh 30vw 1vh 30vw;
 }
 #contentInput {
-    font-weight: normal;
+    font-weight: bold;
     color: black;
     width: 40vw;
+    padding: 1vh 1vw;
     margin: 1vh 20vw 1vh 20vw;
     text-align: left;
     font-family: 'Quicksand', sans-serif;
