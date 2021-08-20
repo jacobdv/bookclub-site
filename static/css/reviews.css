@@ -67,6 +67,7 @@
     text-align: left;
     font-family: 'Quicksand', sans-serif;
     font-size: 0.9em;
+    resize:vertical;
 }
 #reviewButton {
     margin: 3vh 0 0 0;
