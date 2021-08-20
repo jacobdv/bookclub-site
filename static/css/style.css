@@ -80,7 +80,7 @@ html, body {
 .navItem:active {
     text-decoration: underline;
     box-shadow: none;
-    width: calc(33.3333%-3px);
+    width: 33%;
     border-right: 0.5px solid lightslategray;
     border-left: 0.5px solid lightslategray;
 }
@@ -90,5 +90,15 @@ html, body {
     }
     .web {
         display: block;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .navItem:active {
+        width: 33.08%
+    }
+}
+@media only screen and (min-width: 1300px) {
+    .navItem:active {
+        width: 33.15%
     }
 }
