@@ -54,17 +54,9 @@
     font-size: 0.8em;
     text-align: center;
 }
-#nameInput {
-    width: 7ch;
-}
-#titleInput {
-    width: 50ch;
-}
-#contentInput {
-    height: fit-content;
-}
-#ratingInput {
-    width: 3ch;
+#nameInput, #titleInput, #ratingInput {
+    width: 20vw;
+    margin: 1vh 40vw 1vh 40vw;
 }
 #reviewButton {
     margin: 3vh 0 0 0;

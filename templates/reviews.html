@@ -56,13 +56,13 @@
         </div>
         <div class='row' id='reviewAddition'>
             <h1 id='newReviewName'>Name</h1>
-            <input type='text' id='nameInput' class='inputs'>
+            <input type='text' id='nameInput' class='inputs' maxlength="7">
             <h1 id='newReviewTitle'>Title</h1>
             <input type='text' id='titleInput' class='inputs'>
             <h1 id='newReviewContent'>Review</h1>
-            <input type='text' id='contentInput' class='inputs'>
+            <textarea type='text' id='contentInput' class='inputs'></textarea>
             <h1 id='newReviewRating'>Rating</h1>
-            <input type='text' id='ratingInput' class='inputs'>
+            <input type='text' id='ratingInput' class='inputs' maxlength="3">
             <button class='newReviewButton' id='reviewButton' onclick='submitReview();'>Submit Review</button>
         </div>
     </div>
