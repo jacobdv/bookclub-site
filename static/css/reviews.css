@@ -59,6 +59,8 @@
     margin: 1vh 30vw 1vh 30vw;
 }
 #contentInput {
+    line-height: 20px;
+    min-height: 80px;
     font-weight: bold;
     color: black;
     width: 40vw;
