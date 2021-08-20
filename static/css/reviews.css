@@ -59,6 +59,8 @@
     margin: 1vh 30vw 1vh 30vw;
 }
 #contentInput {
+    font-weight: normal;
+    color: black;
     width: 40vw;
     margin: 1vh 20vw 1vh 20vw;
     text-align: left;
