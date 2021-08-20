@@ -80,7 +80,7 @@ html, body {
 .navItem:active {
     text-decoration: underline;
     box-shadow: none;
-    margin-right: -3px;
+    width: calc(33.3333%-3px);
     border-right: 0.5px solid lightslategray;
     border-left: 0.5px solid lightslategray;
 }
