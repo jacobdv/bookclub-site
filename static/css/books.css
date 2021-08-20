@@ -24,11 +24,8 @@
     min-width: fit-content;
     box-shadow: 1px 1px;
 }
-#addButton {
-    margin: 0 2.5vw 0 17vw;
-}
-#removeButton {
-    margin: 0 15vw 0 2.5vw;
+#addButton, #removeButton {
+    margin: 0 35vw 1vh;
 }
 #booksMessage {
     display: none;
@@ -73,5 +70,11 @@
 @media only screen and (min-width: 425px) {
     #futureBooksList h1 {
         font-size: 1em;
+    }
+    #addButton {
+        margin: 0 2.5vw 0 16vw;
+    }
+    #removeButton {
+        margin: 0 16vw 0 2.5vw;
     }
 }
