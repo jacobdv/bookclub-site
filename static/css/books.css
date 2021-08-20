@@ -72,9 +72,9 @@
         font-size: 1em;
     }
     #addButton {
-        margin: 0 2.5vw 0 16vw;
+        margin: 0 2.5vw 0 17vw;
     }
     #removeButton {
-        margin: 0 16vw 0 2.5vw;
+        margin: 0 16.5vw 0 2.5vw;
     }
 }
