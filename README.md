@@ -1,1 +1,2 @@
-# bookclub-site
+# Bookclub Site
+This (https://zbookclub.herokuapp.com/) is far from done, but is the basic framework for a bookclub I'm in. We'll be tracking the books we've read here, as well as incorporating our reviews. This also does include functionality to submit book suggestions right now, though this can be improved upon even from what I know from building the wedding website. Feel free to suggest books!
